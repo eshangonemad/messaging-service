@@ -209,6 +209,3 @@ input.onGesture(Gesture.Shake, function () {
 })
 let letter = 0
 letter = 0
-basic.forever(function () {
-	
-})
