@@ -19,6 +19,24 @@ radio.onReceivedString(function (receivedString) {
             # # # # #
             `)
     }
+    if (receivedString == "smi") {
+        basic.showLeds(`
+            . # . # .
+            . . . . .
+            . # . # .
+            . # # # .
+            . . . . .
+            `)
+    }
+    if (receivedString == "sad") {
+        basic.showLeds(`
+            . # . # .
+            . . . . .
+            . # # # .
+            . # . # .
+            . # . # .
+            `)
+    }
     if (receivedString == "a") {
         basic.showString("A")
     }
@@ -201,6 +219,14 @@ input.onButtonPressed(Button.B, function () {
     }
     if (letter == 26) {
         radio.sendString("z")
+        letter = 0
+    }
+    if (letter == 27) {
+        radio.sendString("smi")
+        letter = 0
+    }
+    if (letter == 28) {
+        radio.sendString("sad")
         letter = 0
     }
 })
